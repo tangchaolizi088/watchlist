@@ -9,21 +9,21 @@
 </head>
 <body>
 
-    <h2>
-        <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
-        {{ name }}'s Watchlist</h2>
-    <p>{{ movies|length }} Titles</p>
-    <ul class="movie-list">
-        {% for movie in movies %}
-        <li>{{ movie.title }} - {{ movie.year }}</li>
-        {% endfor %}
-
-    </ul>
+<h2>
+    <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
+    {{ name }}'s Watchlist
+</h2>
+<p>{{ movies|length }} Titles</p>
+<ul class="movie-list">
+    {% for movie in movies %}
+    <li>{{ movie.title }} - {{ movie.year }}</li>
+    {% endfor %}
+</ul>
 <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}">
-    <footer>
-        <small>
-            &copy; 2008 <a href="http://helloflask.com/tutorial">HelloFlask</a>
-        </small>
-    </footer>
+<footer>
+    <small>
+        &copy; 2008 <a href="http://helloflask.com/tutorial">HelloFlask</a>
+    </small>
+</footer>
 </body>
 </html>

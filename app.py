@@ -1,7 +1,7 @@
 from flask import Flask
-from flask import escape,url_for,render_template
-app = Flask(__name__)
+from flask import escape, url_for, render_template
 
+app = Flask(__name__)
 
 name = 'Grey Li'
 movies = [
@@ -22,12 +22,7 @@ movies = [
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('index.html',name = name,movies = movies)
-
-
-
-
-
+    return render_template('index.html', name=name, movies=movies)
 
 
 if __name__ == '__main__':
